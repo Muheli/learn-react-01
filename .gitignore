@@ -1,0 +1,5 @@
+.DS_Store
+*„
+*.bbprojectsettings
+*.lockfile
+*.secret
