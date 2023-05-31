@@ -1,0 +1,15 @@
+# configuration for "s3_website" (https://github.com/laurilehmijoki/s3_website)
+# used during deploy process
+# note: make sure the "CLOUNDFRONT_DIST_ID" is set before running s3_website
+
+site: dist/
+s3_bucket: <%= ENV['S3_BUCKET'] %>
+s3_key_prefix: a8BxS4bNj9
+gzip: true
+cloudfront_distribution_id: <%= ENV['CLOUDFRONT_DIST_ID'] %>
+cloudfront_wildcard_invalidation: true
+cloudfront_distribution_config:
+  http_version: http2
+cache_control:
+  "index.html": no-cache, no-store, max-age=0
+  "service-worker.js": no-cache, no-store, max-age=0

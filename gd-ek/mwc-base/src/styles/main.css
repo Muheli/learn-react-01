@@ -1,0 +1,263 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Open Sans", sans-serif;
+  color: #fff;
+  overflow: hidden;
+  position: fixed;
+}
+
+.bgimg {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("../assets/images/background/desktop-bg.png");
+  background-color: #000000;
+  min-height: 100vh;
+}
+
+.header-logo {
+  text-align: center;
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+  cursor: default;
+  opacity: 0.9;
+  padding-top: 3%;
+  height: 10vh;
+}
+
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer {
+    display: none;
+    justify-content: space-between;
+    position: static;
+    bottom: 0;
+  }
+
+
+/* Homepage css */
+.homepage{
+    display: flex;
+    flex-direction: column;
+    min-height: 70vh;
+  }
+  
+
+.hompage-list-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+}
+
+.hompage-icon-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 2.5em;
+  padding: 1em;
+  width: 13%;
+  cursor:pointer;
+}
+
+.homepage-text-icon { 
+  font-weight: bold;
+  color: #fff;
+}
+
+.hompage-img-icon {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+/* FAQ Page css */
+.faq-header{
+  font-size: 42px;
+  border-bottom: 1px dotted #ccc;
+  padding: 24px;
+}
+
+.faq-content {
+  margin: 0 auto;
+  padding: 8%;
+  padding-top: 120px;
+  height: 100vh;
+  padding-bottom: 100px;
+  /* experiment */
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+
+
+}
+
+.faq-question {
+  /* border-bottom: 1px dotted #ccc; */
+  margin-bottom: 20px;
+}
+
+.panel-title {
+  flex: 1;
+  margin-top: 0;
+  font-size: 19px;
+  line-height: 28px;
+}
+
+.panel-content {
+  /* font-size: 20px; */
+  height: 0;
+  /* overflow: hidden; */
+  z-index: -1;
+  position: relative;
+  opacity: 0;
+  -webkit-transition: 1.5s ease;
+  -moz-transition: 1.5s ease;
+  -o-transition: 1.5s ease;
+  transition: 1.5s ease;
+}
+
+.panel-content-open {
+  height: auto;
+  opacity: 1;
+  z-index: auto;
+}
+
+
+
+.panel-icon {
+  z-index: 5;
+  font-size: 25px;
+  line-height: 100%;
+  -webkit-user-select: none;    
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-transition: .5s ease;
+  -moz-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .5s ease;
+  color:#00F1FE;
+  width: 0.7em;
+  transform: rotate(270deg);
+}
+
+
+.panel-icon-open {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.panel {
+  display: none;
+}
+
+.faq-headline {
+  font-size: 54px;
+  line-height: 57px;
+  color: #ffffff;
+  width: max-content;
+  display: flex;
+  background: radial-gradient(138.05% 575.96% at -10.23% 0%, #33FFFF 0%, #FB429B 99.99%, #C43AFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+  margin-bottom: 20px;
+
+}
+
+
+
+
+.footer div {
+  width: 10%;
+  margin: 3% 10%;
+}
+
+.footer img {
+  width: 100%;
+}
+
+/* For width 800px and smaller: */
+@media only screen and (max-width: 800px) {
+  .header-logo {
+    width: 100%;
+    height: 100%;
+    width: auto;
+    padding: 10% 25% 7%;
+    display: flex;
+    flex-direction: column;
+    top: auto;
+  }
+
+  .bgimg {
+    background-image: url("../assets/images/background/mobile-bg-800.png");
+    background-attachment: fixed;
+  }
+  .hompage-icon-container { 
+    margin: 0;
+    padding: 0px;
+    width: 40%;
+  }
+
+
+
+  .panel-title {
+    flex: 1;
+    margin-top: 0;
+    font-size: 19px;
+    line-height: 28px;
+  }
+
+  .plus {
+    margin-top: 0.3em;
+  }
+
+  .hompage-list-container {
+    justify-content: space-evenly;
+    align-content: center;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .footer {
+    display: flex;
+  }
+}
+
+@media (orientation: landscape) {
+  .hompage-icon-container {
+    padding: 0;
+    width: 13%;
+  }
+
+  .hompage-list-container{
+    height: auto;
+  }
+
+  .plus {
+    margin-top: 0.3em;
+  }
+
+  .bgimg {
+    background-image: url("../assets/images/background/desktop-bg.png");
+    background-attachment: fixed;
+  }
+}
+
+
