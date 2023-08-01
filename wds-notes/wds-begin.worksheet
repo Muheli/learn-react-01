@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CurrentWorkingDirectory</key>
+	<string>/Users/joe/gh/muheli/my-vatom-env/worksheets</string>
+	<key>WorksheetContents</key>
+	<string>
+
+export function TodoListItem(props){
+	&lt;div&gt;
+		&lt;input type="checkbox" checked={props.isComplete} /&gt;
+		&lt;label&gt; {props.children} &lt;/label&gt;
+	&lt;/div&gt;
+}
+
+
+
+
+&lt;div className="large" id="largeDiv"&gt;
+	&lt;label htmlFor="inputId"&gt;Label:&lt;/label&gt;
+	&lt;input id="inputId" type="number" value={3} /&gt;
+&lt;/div&gt;
+
+
+</string>
+</dict>
+</plist>
